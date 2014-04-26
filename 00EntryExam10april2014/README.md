@@ -1,0 +1,1 @@
+Solutions to the problems from the first entrance exam. All solutions score 100/100.
