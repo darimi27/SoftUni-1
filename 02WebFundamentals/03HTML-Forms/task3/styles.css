@@ -1,0 +1,19 @@
+.blue-text {
+	color: #1F749B;
+}
+
+.gray-text {
+	color: #464646;
+}
+
+#form-container h1 {
+	font-size: 230%;
+}
+
+#form-container img {
+	vertical-align: middle;
+}
+
+#form-container input[type=image] {
+	vertical-align: middle;
+}

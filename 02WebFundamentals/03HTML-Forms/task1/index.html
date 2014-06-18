@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Simple Form</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div id="form-container">
+		<h2 class="blue-text">Enter the system</h2>
+		<p>It is necessary to login in order to enroll in a course</p>
+
+		<form action="">
+			<fieldset>
+				<legend>New user? <span class="blue-text">Register.</span></legend>
+				<input type="text" placeholder="User name" class="block-input" required>
+				<input type="email" placeholder="Email" class="block-input" required>
+				<input type="password" placeholder="Password" class="block-input" required>
+				<input type="password" placeholder="Confirm password" class="block-input" required>
+				<input type="submit" value="Register" class="gray-button">
+			</fieldset>
+
+			<fieldset class="white-text blue-background">
+				<legend class="blue-background">Already a student? Login.</legend>
+				<input type="text" placeholder="User name" class="block-input" required>
+				<input type="password" placeholder="Password" class="block-input" required>
+				<input type="checkbox" value="remember-me" id="stay-logged">
+				<label for="stay-logged">Remember me</label>
+				<input type="submit" value="Login" class="blue-button">
+				<br>
+				<a href="" class="white-text">Forgot Password</a>
+			</fieldset>
+		</form>
+	</div>
+</body>
+</html>

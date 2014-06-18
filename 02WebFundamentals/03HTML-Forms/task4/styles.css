@@ -1,0 +1,72 @@
+#wrapper {
+	width: 600px;
+	background-color: #3B5997;
+	color: #fff;
+	border-radius: 10px;
+}
+
+#trademark {
+	font-size: 14px;
+}
+
+header {
+	text-align: center;
+}
+
+header h1 {
+	font-size: 300%;
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+header h2 {
+	margin-bottom: 5px;
+}
+
+header h3 {
+	margin-top: 0px;
+}
+
+form fieldset {
+	vertical-align: top;
+	display: inline-block;
+	width: 35%;
+	height: 200px;
+}
+
+form input, form select {
+	border-radius: 5px;
+}
+
+form fieldset:last-of-type {
+	margin-left: 5px;
+	width: 50%;
+}
+
+.two-cols {
+	width: 42%;
+}
+
+.three-cols {
+	width: 30%;
+}
+
+.four-cols {
+	width: 22%;
+}
+
+form textarea {
+	max-width: 280px;
+	max-height: 60px;
+}
+
+.buttons {
+	width: 38%;
+	border-radius: 5px;
+	margin: 8px;
+	height: 30px;
+}
+
+.buttons:last-of-type {
+	width: 53%;
+}

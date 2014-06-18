@@ -1,0 +1,49 @@
+.block-input {
+	display: block;
+	width: 100%;
+}
+
+.form-column-2 {
+	margin-top: 5px;
+	margin-left: 5px;
+	display: inline-block;
+	width: 45%;
+}
+
+.form-column-3 {
+	margin-top: 5px;
+	margin-left: 5px;
+	display: inline-block;
+	width: 30%;
+}
+
+#flight-order {
+	background-color: #fcc;
+	width: 600px;
+	text-align: center;
+	padding: 10px;
+}
+
+#flight-order h1 {
+	text-transform: uppercase;
+}
+
+#flight-order form {
+	text-align: left;
+}
+
+#flight-order label {
+	font-style: italic;
+}
+
+#flight-order fieldset {
+	display: inline-block;
+	vertical-align: top;
+	margin: 1%;
+	width: 43%;
+	border: none;
+}
+
+#flight-order input[type=submit] {
+	width: 100%;
+}
