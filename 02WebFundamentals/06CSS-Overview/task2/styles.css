@@ -1,0 +1,106 @@
+aside, section article {
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  max-width: 1580px;
+  background-image: url(images/bg-image.jpg);
+}
+body > header {
+  text-align: center;
+  font-size: 3em;
+  font-weight: bold;
+  color: yellow;
+  height: 85px;
+  padding-bottom: 15px;
+  background: #ff0000;
+  background: -moz-linear-gradient(left, red 0%, red 33%, green 33%, green 68%, blue 68%, blue 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, red), color-stop(33%, red), color-stop(33%, green), color-stop(68%, green), color-stop(68%, blue), color-stop(100%, blue));
+  background: -webkit-linear-gradient(left, red 0%, red 33%, green 33%, green 68%, blue 68%, blue 100%);
+  background: -o-linear-gradient(left, red 0%, red 33%, green 33%, green 68%, blue 68%, blue 100%);
+  background: -ms-linear-gradient(left, red 0%, red 33%, green 33%, green 68%, blue 68%, blue 100%);
+  background: linear-gradient(to right, red 0%, red 33%, green 33%, green 68%, blue 68%, blue 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0000', endColorstr='#0000ff',GradientType=1 );
+}
+
+aside {
+  width: 250px;
+  height: 280px;
+  float: left;
+  margin-left: 15px;
+  margin-top: 40px;
+  padding: 20px;
+}
+aside header {
+  font-size: 24px;
+  text-decoration: underline;
+  font-weight: bold;
+}
+aside a {
+  color: #000;
+  text-decoration: none;
+  font-size: 18px;
+}
+aside ul {
+  list-style-image: url(images/check.png);
+}
+aside li {
+  margin-top: 8px;
+}
+
+section {
+  width: 1160px;
+  float: left;
+  margin-left: 45px;
+  margin-top: 40px;
+}
+section article {
+  padding: 20px;
+  margin-bottom: 12px;
+}
+section article header {
+  margin-bottom: 5px;
+  border-radius: 5px;
+  font-size: 28px;
+  padding: 10px;
+}
+section article div:first-letter {
+  font-size: 250%;
+}
+section article a {
+  color: #808080;
+}
+section article span[lang=la] {
+  color: #00f;
+}
+
+#webColors {
+  background-color: #f00;
+  color: #fff;
+}
+
+#webSafeColors {
+  background-color: #ffa500;
+}
+
+#RGB {
+  background-color: #ff0;
+}
+
+#RGBA {
+  background-color: #008000;
+  color: #fff;
+}
+
+#HSLHSV {
+  background-color: #00f;
+  color: #fff;
+}
+
+#lorem {
+  background-color: #800080;
+  color: #fff;
+}

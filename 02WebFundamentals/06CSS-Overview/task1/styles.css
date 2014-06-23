@@ -1,0 +1,124 @@
+table th, table tr td {
+  border: 1px solid black;
+}
+
+table .brasil, table .spain, table .italy, table .argentina, table .germany {
+  background-size: 17px 12px;
+  background-position: right center;
+  background-repeat: no-repeat;
+  padding-right: 20px;
+}
+
+table .mexico, table .netherlands, table .england, table .bosnia, table .portugal {
+  background-size: 17px 12px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  padding-left: 20px;
+}
+
+#table-wrapper {
+  display: inline-block;
+  padding: 15px;
+  background-color: #00923e;
+}
+
+table {
+  border-spacing: 0;
+}
+table th {
+  background-color: #f8c711;
+  font-size: 120%;
+}
+table th:first-child {
+  border-top-left-radius: 10px;
+  text-align: right;
+}
+table th:nth-child(3) {
+  text-align: left;
+}
+table th:last-child {
+  border-top-right-radius: 10px;
+}
+table tr:nth-child(even) {
+  background-color: #c8c8c8;
+}
+table tr:nth-child(odd) {
+  background-color: white;
+}
+table tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+table tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}
+table tr td {
+  text-align: center;
+  width: 60px;
+}
+table tr td:first-child {
+  width: 105px;
+  text-align: right;
+}
+table tr td:nth-child(3) {
+  width: 115px;
+  text-align: left;
+}
+table tr td:nth-child(5) {
+  width: 105px;
+  text-align: right;
+}
+table tr td:nth-child(6) {
+  width: 80px;
+}
+table tr td:nth-child(7) {
+  width: 105px;
+  text-align: left;
+}
+table input {
+  width: 24px;
+  color: green;
+}
+table input.disabled-input {
+  color: red;
+}
+table button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: green;
+  font-size: 70%;
+}
+table button.disabled-btn {
+  background-color: red;
+}
+table .brasil {
+  background-image: url("images/brasil.jpg");
+}
+table .mexico {
+  background-image: url("images/mexico.jpg");
+}
+table .spain {
+  background-image: url("images/spain.jpg");
+}
+table .netherlands {
+  background-image: url("images/netherlands.jpg");
+}
+table .italy {
+  background-image: url("images/italy.jpg");
+}
+table .england {
+  background-image: url("images/england.jpg");
+}
+table .argentina {
+  background-image: url("images/argentina.jpg");
+}
+table .bosnia {
+  background-image: url("images/bosnia.jpg");
+}
+table .germany {
+  background-image: url("images/germany.jpg");
+}
+table .portugal {
+  background-image: url("images/portugal.jpg");
+}

@@ -1,0 +1,19 @@
+header {
+	background-color: #eee;
+}
+
+header img {
+	vertical-align: middle;
+}
+
+#sidebar {
+	background-color: #ddd;
+}
+
+#main {
+	background-color: #ccc;
+}
+
+footer {
+	background-color: #bbb;
+}

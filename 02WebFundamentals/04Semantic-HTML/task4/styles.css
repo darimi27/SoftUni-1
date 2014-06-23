@@ -1,0 +1,159 @@
+header, section, article, aside, footer {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+div, p, h1, h2, h3, ul, li, a {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+.clearfix {
+	zoom: 1;
+}
+
+.clearfix::after {
+	display: table;
+	content: '';
+	height: 0;
+	clear: both;
+}
+
+#wrapper {
+	max-width: 800px;
+	margin: 12px auto;
+	border: 1px solid #ccc;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#wrapper>header {
+	border-bottom: 1px solid #ccc;
+}
+
+nav {
+	margin-top: 30px;
+	float: left;
+}
+
+.no-style-ul {
+	list-style-type: none;
+}
+
+nav li {
+	list-style-type: none;
+	display: inline-block;
+}
+
+nav a {
+	display: block;
+	color: #ccc;
+	text-transform: uppercase;
+	width: 60px;
+}
+
+nav li:nth-child(n+2) {
+	margin-left: 30px;
+}
+
+header input {
+	background-color: #eee;
+	margin-top: 30px;
+	float: right;
+}
+
+#left-sidebar, #main-content, #right-sidebar {
+	float: left;
+	width: 25%;
+	margin-top: 50px;
+}
+
+#main-content {
+	width: 45%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 2%;
+}
+
+#main-content footer {
+	border-top: 1px solid #ccc;
+	padding-top: 8px;
+}
+
+.leave-comment {
+	text-decoration: underline;
+}
+
+.author, .posted-on, .leave-comment {
+	text-transform: uppercase;
+	font-size: 0.9em;
+}
+
+#left-sidebar {
+	border-top: 1px solid #ccc;
+	padding-top: 8px;
+}
+
+#right-sidebar {
+	margin-left: 2%;
+}
+
+#right-sidebar section {
+	margin-bottom: 12px;
+}
+
+#right-sidebar section h3 {
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 8px;
+}
+
+#wrapper>footer {
+	margin-left: -10px;
+	margin-right: -10px;
+	clear: both;
+	background-color: #111;
+}
+
+ /* insert right arrow after each continue */
+.continue:after {
+	content: "\2192";
+}
+
+/* insert left arrow after each continue */
+.previous:before {
+	content: "\2190";
+}
+
+article {
+	margin-bottom: 12px;
+}
+
+article h1 {
+	font-size: 1.5em;
+}
+
+article header p {
+	color: #ccc;
+}
+
+article header a {
+	color: #ccc;
+}
+
+article p {
+	margin-bottom: 10px;
+}
+
+.main-footer-col {
+	color: #fff;
+	width: 19%;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	display: inline-block;
+	vertical-align: top;
+}

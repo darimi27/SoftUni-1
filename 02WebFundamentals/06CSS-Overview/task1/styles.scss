@@ -1,0 +1,179 @@
+$backgroundColor: #00923e;
+$headRowColor: #f8c711;
+$evenRowColor: #c8c8c8;
+$oddRowColor: #fff;
+$disabledColor: #ff0000;
+$enabledColor: #008000;
+
+%table-border {
+	border: 1px solid black;
+}
+
+%flag-right {
+	background-size: 17px 12px;
+	background-position: right center;
+	background-repeat: no-repeat;
+	padding-right: 20px;
+}
+
+%flag-left {
+	background-size: 17px 12px;
+	background-position: left center;
+	background-repeat: no-repeat;
+	padding-left: 20px;
+}
+
+@mixin backgroundImg($url) {
+	background-image: url($url);
+}
+
+#table-wrapper {
+	display: inline-block;
+	padding: 15px;
+	background-color: $backgroundColor;
+}
+
+table {
+	border-spacing: 0;
+
+	th {
+		@extend %table-border;
+		background-color: $headRowColor;
+		font-size: 120%;
+
+		&:first-child {
+			border-top-left-radius: 10px;
+			text-align: right;
+		}
+
+		&:nth-child(3) {
+			text-align: left;
+		}
+
+		&:last-child {
+			border-top-right-radius: 10px;
+		}
+	}
+
+	tr {
+		&:nth-child(even) {
+			background-color: $evenRowColor;
+		}
+
+		&:nth-child(odd) {
+			background-color: $oddRowColor;
+		}
+
+		&:last-child {
+			td:first-child {
+				border-bottom-left-radius: 10px;
+			}
+
+			td:last-child {
+				border-bottom-right-radius: 10px;
+			}
+		}
+
+		td {
+			@extend %table-border;
+			text-align: center;
+			width: 60px;
+
+			&:first-child {
+				width: 105px;
+				text-align: right;
+			}
+
+			&:nth-child(3) {
+				width: 115px;
+				text-align: left;
+			}
+
+			&:nth-child(5) {
+				width: 105px;
+				text-align: right;
+			}
+
+			&:nth-child(6) {
+				width: 80px;
+			}
+
+			&:nth-child(7) {
+				width: 105px;
+				text-align: left;
+			}
+		}
+	}
+
+	input {
+		width: 24px;
+		color: $enabledColor;
+
+		&.disabled-input {
+			color: $disabledColor;
+		}
+	}
+
+	button {
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		color: #fff;
+		background-color: $enabledColor;
+		font-size: 70%;
+
+		&.disabled-btn {
+			background-color: $disabledColor;
+		}
+	}
+
+	.brasil {
+		@include backgroundImg("images/brasil.jpg");
+		@extend %flag-right;
+	}
+
+	.mexico {
+		@include backgroundImg("images/mexico.jpg");
+		@extend %flag-left;
+	}
+
+	.spain {
+		@include backgroundImg("images/spain.jpg");
+		@extend %flag-right;
+	}
+
+	.netherlands {
+		@include backgroundImg("images/netherlands.jpg");
+		@extend %flag-left;
+	}
+
+	.italy {
+		@include backgroundImg("images/italy.jpg");
+		@extend %flag-right;
+	}
+
+	.england {
+		@include backgroundImg("images/england.jpg");
+		@extend %flag-left;
+	}
+
+	.argentina {
+		@include backgroundImg("images/argentina.jpg");
+		@extend %flag-right;
+	}
+
+	.bosnia {
+		@include backgroundImg("images/bosnia.jpg");
+		@extend %flag-left;
+	}
+
+	.germany {
+		@include backgroundImg("images/germany.jpg");
+		@extend %flag-right;
+	}
+
+	.portugal {
+		@include backgroundImg("images/portugal.jpg");
+		@extend %flag-left;
+	}
+}
