@@ -1,0 +1,106 @@
+$semiWhite: rgba(255, 255, 255, 0.4);
+
+%fieldFormat {
+	border-radius: 5px;
+	width: 280px;
+	padding: 5px;
+	box-sizing: border-box;
+}
+
+@mixin cardImageFormat($url) {
+	background-image: url($url);
+	background-position: left center;
+	background-repeat: no-repeat;
+}
+
+form {
+	width: 550px;
+	background-image: url(images/formBackground.jpg);
+	padding: 50px 25px 25px 25px;
+
+	fieldset {
+		border: 0;
+		margin-top: 5px;
+	}
+
+	legend {
+		color: #fff;
+		font-size: 18px;
+		font-weight: bold;
+	}
+
+	input[type=button] {
+		display: block;
+		margin: 0 auto;
+		color: #fff;
+		background-color: #04152f;
+		width: 140px;
+		height: 40px;
+		border: 0;
+		border-radius: 15px;
+	}
+
+	label {
+		display: block;
+		border: 1px solid #fff;
+		border-radius: 5px;
+		margin-top: 3px;
+		padding: 10px;
+		background-color: $semiWhite;
+
+		span {
+			display: inline-block;
+			width: 140px;
+
+			&.address {
+				vertical-align: top;
+			}
+		}
+
+		input {
+			@extend %fieldFormat;
+
+		}
+
+		textarea {
+			@extend %fieldFormat;
+			height: 120px;
+		}
+
+		select {
+			@extend %fieldFormat;
+		}
+	}
+}
+
+#card-payment {
+	padding: 10px;
+	border: 1px solid #fff;
+	border-radius: 5px;
+	background-color: $semiWhite;
+	margin-top: 3px;
+	margin-bottom: 0;
+
+	span {
+		display: block;
+	}
+
+	label {
+		display: inline-block;
+		border: 0;
+		background-color: transparent;
+		padding-left: 42px;
+
+		&.visa {
+			@include cardImageFormat("images/visa.jpg");
+		}
+
+		&.amex {
+			@include cardImageFormat("images/amex.jpg");
+		}
+
+		&.mastercard {
+			@include cardImageFormat("images/mastercard.jpg");
+		}
+	}
+}

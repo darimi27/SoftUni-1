@@ -1,0 +1,125 @@
+$transperant-black: rgba(0,0,0,0.4);
+$text-shadow: 10px 10px 15px $transperant-black;
+
+%placeholder-style {
+	&::-webkit-input-placeholder {
+		text-align: center;
+		color: black;
+	}
+
+	&:-moz-placeholder {
+		text-align: center;
+		color: black;  
+	}
+
+	&::-moz-placeholder {
+		text-align: center;
+		color: black;  
+	}
+
+	&:-ms-input-placeholder {
+		text-align: center;
+		color: black;  
+	}
+}
+
+#box {
+	font-family: Arial, sans-serif;
+	position: relative;
+	width: 600px;
+	height: 200px;
+	border-top: 5px dotted yellow;
+	border-right: 5px solid green;
+	border-bottom: 5px double blue;
+	border-left: 5px dashed red;
+
+	h1 {
+		text-align: center;
+		text-transform: uppercase;
+		text-shadow: $text-shadow;
+		letter-spacing: 5px;
+	}
+
+	.ellipse {
+		border-width: 2px;
+		border-style: solid;
+		border-radius: 50px;
+		text-align: center;
+
+		p {
+			text-shadow: $text-shadow;
+		}
+
+		input {
+			margin-bottom: 15px;
+			padding: 5px 5px;
+			background-color: darken(orange, 5%);
+			border: 2px outset orange;
+
+			@extend %placeholder-style;
+		}
+
+		&.blue {
+			margin-left: 20px;
+			margin-right: 20px;
+			border-color: blue;
+		}
+
+		&.green {
+			border-color: green;
+		}
+
+		&.yellow {
+			border-color: yellow;
+		}
+
+		&.red {
+			border-color: red;
+		}
+	}
+
+	.circle {
+		border: 2px dashed white;
+		border-radius: 50%;
+		background-color: lighten($transperant-black, 25%);
+		box-shadow: 0px 0px 0px 5px lighten($transperant-black, 25%);
+
+		&.small{
+			width: 20px;
+			height: 20px;
+			position: absolute;
+			top: 120px;
+			left: 435px;
+		}
+
+		&.medium {
+			width: 30px;
+			height: 30px;
+			position: absolute;
+			top: 80px;
+			left: 510px;
+		}
+
+		&.large {
+			color: white;
+			text-align: center;
+			padding: 5px;
+			border-radius: 25px;
+			width: 90px;
+			height: 40px;
+			position: absolute;
+			top: 30px;
+			left: 560px;
+
+			p {
+				margin: 0;
+				font-weight: bold;
+			}
+
+			span {
+				display: block;
+				text-transform: uppercase;
+			}
+		}
+	}
+}

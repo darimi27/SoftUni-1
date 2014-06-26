@@ -1,0 +1,101 @@
+#box .ellipse input::-webkit-input-placeholder {
+  text-align: center;
+  color: black;
+}
+#box .ellipse input:-moz-placeholder {
+  text-align: center;
+  color: black;
+}
+#box .ellipse input::-moz-placeholder {
+  text-align: center;
+  color: black;
+}
+#box .ellipse input:-ms-input-placeholder {
+  text-align: center;
+  color: black;
+}
+
+#box {
+  font-family: Arial, sans-serif;
+  position: relative;
+  width: 600px;
+  height: 200px;
+  border-top: 5px dotted yellow;
+  border-right: 5px solid green;
+  border-bottom: 5px double blue;
+  border-left: 5px dashed red;
+}
+#box h1 {
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 10px 10px 15px rgba(0, 0, 0, 0.4);
+  letter-spacing: 5px;
+}
+#box .ellipse {
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 50px;
+  text-align: center;
+}
+#box .ellipse p {
+  text-shadow: 10px 10px 15px rgba(0, 0, 0, 0.4);
+}
+#box .ellipse input {
+  margin-bottom: 15px;
+  padding: 5px 5px;
+  background-color: #e69500;
+  border: 2px outset orange;
+}
+#box .ellipse.blue {
+  margin-left: 20px;
+  margin-right: 20px;
+  border-color: blue;
+}
+#box .ellipse.green {
+  border-color: green;
+}
+#box .ellipse.yellow {
+  border-color: yellow;
+}
+#box .ellipse.red {
+  border-color: red;
+}
+#box .circle {
+  border: 2px dashed white;
+  border-radius: 50%;
+  background-color: rgba(64, 64, 64, 0.4);
+  box-shadow: 0px 0px 0px 5px rgba(64, 64, 64, 0.4);
+}
+#box .circle.small {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 120px;
+  left: 435px;
+}
+#box .circle.medium {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 80px;
+  left: 510px;
+}
+#box .circle.large {
+  color: white;
+  text-align: center;
+  padding: 5px;
+  border-radius: 25px;
+  width: 90px;
+  height: 40px;
+  position: absolute;
+  top: 30px;
+  left: 560px;
+}
+#box .circle.large p {
+  margin: 0;
+  font-weight: bold;
+}
+#box .circle.large span {
+  display: block;
+  text-transform: uppercase;
+}

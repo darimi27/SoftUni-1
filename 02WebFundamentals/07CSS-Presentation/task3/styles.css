@@ -1,0 +1,82 @@
+form label input, form label textarea, form label select {
+  border-radius: 5px;
+  width: 280px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+form {
+  width: 550px;
+  background-image: url(images/formBackground.jpg);
+  padding: 50px 25px 25px 25px;
+}
+form fieldset {
+  border: 0;
+  margin-top: 5px;
+}
+form legend {
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+}
+form input[type=button] {
+  display: block;
+  margin: 0 auto;
+  color: #fff;
+  background-color: #04152f;
+  width: 140px;
+  height: 40px;
+  border: 0;
+  border-radius: 15px;
+}
+form label {
+  display: block;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  margin-top: 3px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+form label span {
+  display: inline-block;
+  width: 140px;
+}
+form label span.address {
+  vertical-align: top;
+}
+form label textarea {
+  height: 120px;
+}
+
+#card-payment {
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin-top: 3px;
+  margin-bottom: 0;
+}
+#card-payment span {
+  display: block;
+}
+#card-payment label {
+  display: inline-block;
+  border: 0;
+  background-color: transparent;
+  padding-left: 42px;
+}
+#card-payment label.visa {
+  background-image: url("images/visa.jpg");
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+#card-payment label.amex {
+  background-image: url("images/amex.jpg");
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+#card-payment label.mastercard {
+  background-image: url("images/mastercard.jpg");
+  background-position: left center;
+  background-repeat: no-repeat;
+}
