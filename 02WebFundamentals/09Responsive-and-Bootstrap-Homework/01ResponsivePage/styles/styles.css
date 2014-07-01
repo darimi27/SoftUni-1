@@ -1,0 +1,123 @@
+html, body, div, header, section, aside, footer,
+h1, nav, ul, li {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #6698ff;
+}
+
+#wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+}
+#wrapper > header {
+  border-bottom: 1px solid #000;
+  margin-bottom: 25px;
+}
+#wrapper > header h1 a {
+  text-decoration: none;
+  color: #fff;
+}
+#wrapper > footer {
+  clear: both;
+  border: 1px solid #000;
+  background-color: #e0eafe;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  text-align: right;
+  position: relative;
+  top: 15px;
+}
+nav ul li {
+  display: inline-block;
+  border: 1px solid #000;
+  width: 100px;
+  height: 30px;
+  background-color: #fff;
+  margin-right: 10px;
+  text-align: center;
+}
+nav ul a {
+  vertical-align: middle;
+  text-decoration: none;
+  color: #000;
+}
+
+section {
+  float: left;
+  width: 75%;
+  margin-bottom: 10px;
+}
+section article {
+  border: 1px solid #000;
+  background-color: #e0eafe;
+  margin-top: 10px;
+  padding: 10px;
+}
+section article:first-of-type {
+  margin: 0;
+}
+
+aside {
+  float: left;
+  margin-left: 5%;
+  width: 20%;
+  border: 1px solid #000;
+  background-color: #e0eafe;
+  padding: 10px;
+}
+aside ul {
+  list-style-type: none;
+}
+aside a {
+  text-decoration: none;
+  color: #000;
+}
+
+/*Media queries*/
+@media screen and (max-width: 780px) {
+  section {
+    float: none;
+    width: 100%;
+  }
+
+  aside {
+    float: none;
+    width: 100%;
+    margin: 10px 0 10px 0;
+    padding: 0;
+  }
+  aside li.block {
+    display: inline-block;
+    vertical-align: top;
+    padding: 5px;
+    width: 24%;
+  }
+}
+@media screen and (max-width: 640px) {
+  #wrapper > header {
+    text-align: center;
+  }
+  #wrapper > header h1 span {
+    display: block;
+  }
+  #wrapper > header ul li {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  aside li.block {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}

@@ -1,0 +1,41 @@
+.navbar-default {
+	background-color: #008000;
+}
+
+
+.navbar-default .navbar-header {
+	margin: 0;
+}
+
+.navbar-default .navbar-header h1 {
+	font-size: 125%;
+}
+
+.navbar-default .navbar-nav {
+	margin-left: 10px;
+}
+
+.navbar-default a.navbar-brand,
+.navbar-default .navbar-nav > li > a {
+	color: #000;
+}
+
+.navbar-default a.navbar-brand:hover {
+	color: #000;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+	background-color: #6db36d;
+}
+
+.navbar-default .navbar-nav .active a,
+.list-group .active {
+	background-color: #90ee90;
+}
+
+footer {
+	margin-top: 12px;
+	padding-top: 12px;
+	border-top: 1px solid #ccc;
+}
+

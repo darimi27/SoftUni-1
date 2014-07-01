@@ -1,0 +1,88 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+section, article, header, h1, p {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#news {
+  background-color: #ccc;
+  width: 100%;
+  padding: 20px 60px;
+  zoom: 1;
+}
+
+#news:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+header {
+  color: #14335c;
+}
+
+article {
+  background: #fff;
+  float: left;
+  width: 32%;
+  max-width: 300px;
+  min-height: 250px;
+  padding: 10px 20px;
+  position: relative;
+  color: #999;
+}
+article:nth-of-type(n+2) {
+  margin-left: 2%;
+}
+article header h1 {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+article span.published {
+  font-size: 0.75rem;
+  color: #999;
+}
+article span.published time {
+  color: #000;
+}
+article p {
+  font-size: 0.9rem;
+}
+article p.calendar {
+  background: url("images/calendar.png") no-repeat center top;
+  padding-top: 70px;
+}
+article p.summer {
+  background: url("images/summer.png") no-repeat center top;
+  padding-top: 70px;
+}
+article p.conference {
+  background: url("images/conference.png") no-repeat center top;
+  padding-top: 70px;
+}
+article header {
+  border-bottom: 1px solid #ccc;
+}
+article footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-right: 20px;
+  border-top: 1px solid #ccc;
+}
+article footer span.tags {
+  font-size: 0.75rem;
+}
+article footer span.tags a {
+  color: #999;
+  text-decoration: none;
+}
+article footer span.tags strong {
+  color: #000;
+}

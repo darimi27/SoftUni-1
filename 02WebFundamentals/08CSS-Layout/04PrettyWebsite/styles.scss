@@ -1,0 +1,179 @@
+div, header, nav, section, ul, article {
+	margin: 0;
+	padding: 0;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: boder-box;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #999;
+	font-family: Arial, sans-serif;
+}
+
+.clearfix {
+	zoom: 1;
+}
+
+.clearfix:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.float-left {
+	float: left;
+	margin-right: 15px;
+	margin-bottom: 15px;
+}
+
+#site-wrap {
+	max-width: 900px;
+	margin: 0 auto;
+	background-color: #fff;
+}
+
+#main-header {
+	position: relative;
+	height: 270px;
+	background: url('images/headerBackground.jpg') no-repeat left top;
+	background-size: cover;
+
+	h1 {
+		color: #fff;
+		position: absolute;
+		right: 30px;
+		bottom: 15px;
+		font-size: 1.7em;
+	}
+}
+
+#main-nav {
+	$base-color: #e3e3e3;
+	background-color: $base-color;
+	border-bottom: 2px solid lighten($base-color, 30%);
+
+	ul {
+		list-style-type: none;
+
+		li {
+			position: relative;
+
+			&:hover>ul {
+				display: block;
+			}
+		}
+		
+		ul {
+			display: none;
+			position: absolute;
+			width: 160px;
+			background-color: darken($base-color, 30%);
+
+			li:hover {
+				background-color: lighten($base-color, 3%);
+			}
+		}
+	}
+
+	& > ul > li {
+		display: inline-block;
+		border-left: 1px solid lighten($base-color, 30%);
+
+		&:last-child {
+			border-right: 1px solid lighten($base-color, 30%);
+		}
+
+		&:hover>a {
+			background-color: darken($base-color, 30%);
+		}
+
+	}
+
+	a {
+		display: block;
+		text-decoration: none;
+		color: #605f61;
+		text-transform: uppercase;
+		padding: 10px 25px;
+	}
+
+	.sub-sub-list {
+		left: 160px;
+		top: 0;
+	}
+}
+
+#page-body {
+	padding: 15px 30px;
+
+	.left-col {
+		float: left;
+		width: 70%;
+	}
+
+	.right-col {
+		float: left;
+		width: 25%;
+		margin-left: 5%;
+	}
+
+	section,
+	aside {
+		border-radius: 10px;
+		border: 1px solid #ccc;
+		padding: 7px 15px;
+		margin-top: 15px;
+	}
+
+	header {
+		color: #82be1b;
+
+		&.upcase {
+			text-transform: uppercase;
+		}
+	}
+}
+aside {
+	font-size: 0.9em;
+
+	&:first-of-type {
+		background-color: #eee;
+	}
+
+	time {
+		font-weight: bold;
+	}
+
+	a {
+		color: green;
+	}
+}
+
+#main-footer {
+	background-color: #8bc523;
+	height: 70px;
+	line-height: 70px;
+	text-align: center;
+
+	a {
+		color: #000;
+		padding-left: 5px;
+		border-left: 1px solid #000;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	#site-wrap {
+		width: 100%;
+	}
+	
+	#page-body {
+		.left-col,
+		.right-col {
+			float: none;
+			width: 90%;
+			margin: 15px auto;
+		}
+	}
+}

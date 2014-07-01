@@ -1,0 +1,188 @@
+html, body, header, h1, h2, h3, nav, ul, li, aside, section,
+div, article, footer {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+ul {
+	list-style-type: none;
+}
+
+
+body {
+	font-family: Arial, sans-serif;
+	background-image: url('../images/background-flowers.jpg');
+}
+
+#wrapper {
+	max-width: 960px;
+	margin: 0 auto;
+	zoom: 1;
+}
+
+#wrapper:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+#wrapper > header {
+	background-color: rgba(252, 205, 205, 0.85);
+	border: 1px solid #000;
+	position: relative;
+	padding: 25px 10px;
+	margin-bottom: 35px;
+}
+
+#wrapper > header h1 a {
+	color: #000;
+	text-decoration: none;
+}
+
+#wrapper > header h1 a img {
+	max-width: 30%;
+	vertical-align: middle;
+}
+
+#wrapper > header h1 a span {
+	position: absolute;
+	top: 25px;
+	right: 10px;
+}
+
+#wrapper > header > nav ul {
+	text-align: right;
+}
+
+#wrapper > header > nav li {
+	list-style-type: none;
+	background-color: #eb2a7b;
+	display: inline-block;
+	border: 1px solid #000;
+	margin-right: 15px;
+	width: 150px;
+	height: 45px;
+	text-align: center;
+	line-height: 45px;
+}
+
+#wrapper > header > nav li:hover {
+	background-color: #fdcbca;
+}
+
+#wrapper > header > nav li a {
+	text-decoration: none;
+	color: #fff;
+	display: block;
+}
+
+.left, .right {
+	width: 20%;
+	border: 1px solid #000;
+	background-color: rgba(252, 205, 205, 0.85);
+	margin-bottom: 10px;
+}
+
+.left {
+	float: left;
+	padding: 15px;
+}
+
+.left a {
+	color: #000;
+	text-decoration: none;
+}
+
+.right {
+	float: right;
+	padding: 30px 15px;
+}
+
+#wrapper > section {
+	display: inline-block;
+	width: 56%;
+	border: 1px solid #000;
+	background-color: rgba(252, 205, 205, 0.85);
+	margin-left: 2%;
+	margin-right: 2%;
+	padding: 20px 15px;
+}
+
+#wrapper > section img {
+	margin-left: 1%;
+	margin-top: 1%;
+	max-width: 23%;
+}
+
+#wrapper > footer {
+	clear: both;
+	width: 100%;
+	background-color: rgba(252, 205, 205, 0.85);
+	border: 1px solid #000;
+	margin-top: 15px;
+	text-align: center;
+}
+
+#wrapper > footer a {
+	color: #000;
+	text-decoration: none;
+}
+
+@media screen and (max-width: 960px) {
+	#wrapper > section img {
+		margin-left: 1%;
+		margin-top: 1%;
+		max-width: 48%;
+	}
+}
+
+@media screen and (max-width: 780px) {
+	#wrapper > header > nav ul {
+		text-align: center;
+	}
+
+	.left, .right {
+		display: none;
+	}
+	
+	#wrapper > section {
+		margin: 12px 0;
+		width: 100%;
+	}
+
+	#wrapper > section img {
+		margin-left: 1%;
+		margin-top: 1%;
+		max-width: 31%;
+	}
+
+}
+
+@media screen and (max-width: 640px) {
+	#wrapper > header {
+		text-align: center;
+	}
+
+	#wrapper > header h1 a img {
+		max-width: 70%;
+	}
+
+	#wrapper > header h1 a span {
+		display: block;
+		position: static;
+		margin-bottom: 8px;
+	}
+
+	#wrapper > header > nav {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	#wrapper > header > nav li {
+		display: block;
+		width: 100%;
+	}
+}

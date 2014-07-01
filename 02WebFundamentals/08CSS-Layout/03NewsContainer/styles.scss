@@ -1,0 +1,106 @@
+$header-color: #14335c;
+
+@mixin image-box($url) {
+	background: url($url) no-repeat center top;
+	padding-top: 70px;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+}
+
+section, article, header, h1, p {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#news {
+	background-color: #ccc;
+	width: 100%;
+	padding: 20px 60px;
+	zoom: 1;
+}
+
+#news:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+header {
+	color: $header-color;
+}
+
+article {
+	background: #fff;
+	float: left;
+	width: 32%;
+	max-width: 300px;
+	min-height: 250px;
+	padding: 10px 20px;
+	position: relative;
+	color: #999;
+
+	&:nth-of-type(n+2) {
+		margin-left: 2%;
+	}
+
+	header h1 {
+		text-transform: uppercase;
+		font-size: 0.8rem;
+	}
+
+	span.published {
+		font-size: 0.75rem;
+		color: #999;
+
+		time {
+			color: #000;
+		}
+	}
+
+	p {
+		font-size: 0.9rem;
+	}
+
+	p.calendar {
+		@include image-box('images/calendar.png');
+	}
+
+	p.summer {
+		@include image-box('images/summer.png');
+	}
+
+	p.conference {
+		@include image-box('images/conference.png');
+	}
+
+	header {
+		border-bottom: 1px solid #ccc;
+	}
+
+	footer {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		padding-right: 20px;
+		border-top: 1px solid #ccc;
+
+		span.tags {
+			font-size: 0.75rem;
+			
+			a {
+				color: #999;
+				text-decoration: none;
+			}
+
+			strong {
+				color: #000;
+			}
+		}
+	}
+
+}

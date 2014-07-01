@@ -1,0 +1,20 @@
+{
+  "name": "03Bootstrap",
+  "version": "0.0.0",
+  "authors": [
+    "lostm1nd <kliomba@abv.bg>"
+  ],
+  "description": "SoftUni Bootstrap training",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0"
+  }
+}
