@@ -1,0 +1,1 @@
+[Pretty website (not so much) preview](https://rawgit.com/lostm1nd/SoftUni/master/02WebFundamentals/08CSS-Layout/04PrettyWebsite/index.html)
