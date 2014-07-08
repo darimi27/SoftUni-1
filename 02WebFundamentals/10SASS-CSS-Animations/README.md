@@ -1,0 +1,1 @@
+[Shaky Gallery](https://rawgit.com/lostm1nd/SoftUni/master/02WebFundamentals/10SASS-CSS-Animations/02ShakyGallery/index.html)
