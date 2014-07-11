@@ -3,7 +3,10 @@
 
   var hoursClockHand = document.getElementById('hours'),
       minutesClockHand = document.getElementById('minutes'),
-      secondsClockHand = document.getElementById('seconds');
+      secondsClockHand = document.getElementById('seconds'),
+      degreesPerTick = 360 / 60,
+      degreesPerHour = 360 / 12,
+      degreesPerHalfHour = degreesPerHour / 2;
 
   setInterval(function() {
     var now = new Date(),
@@ -14,10 +17,15 @@
       if (hours > 12) {
         hours = hours - 12;
       }
-	  
-	  setRotation(hoursClockHand, hours*30);
-      setRotation(minutesClockHand, minutes*6);
-      setRotation(secondsClockHand, seconds*6);
+
+      if (minutes > 30) {
+        setRotation(hoursClockHand, hours*degreesPerHour + degreesPerHalfHour);
+      } else {
+        setRotation(hoursClockHand, hours*degreesPerHour);
+      }
+
+      setRotation(minutesClockHand, minutes*degreesPerTick);
+      setRotation(secondsClockHand, seconds*degreesPerTick);
   }, 1000);
 
   function setRotation(element, degrees) {
