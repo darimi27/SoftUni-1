@@ -14,13 +14,8 @@
       if (hours > 12) {
         hours = hours - 12;
       }
-
-      if (minutes > 30) {
-        setRotation(hoursClockHand, hours*45);
-      } else {
-        setRotation(hoursClockHand, hours*30);
-      }
-
+	  
+	  setRotation(hoursClockHand, hours*30);
       setRotation(minutesClockHand, minutes*6);
       setRotation(secondsClockHand, seconds*6);
   }, 1000);
