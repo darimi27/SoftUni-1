@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>String Matrix Rotation</title>
+</head>
+<body>
+<script>
+function solve(input) {
+	var degrees = parseInt(input[0].split(/[()]/)[1], 10);
+	var matrix = [];
+	var rowLen = 0;
+	var i = 0;
+	var j = 0;
+
+	// fill the matrix
+	for (i = 1; i < input.length; i+=1) {
+		if (input[i].length > rowLen) {
+			rowLen = input[i].length;
+		}
+	}
+
+	for (i = 1; i < input.length; i+=1) {
+		matrix[i-1] = input[i].split('');
+
+		for (j = input[i].length; j < rowLen; j+=1) {
+			matrix[i-1].push(' ');
+		}
+	}
+	// filling the matrix ends here
+
+	// rotating functions
+	function rotate90(mat) {
+		var rows = mat.length;
+		var cols = mat[0].length;
+		var transposed = [];
+
+		for (var i = 0; i < cols; i++) {
+			transposed[i] = [];
+			for (var j = 0; j < rows; j++) {
+				transposed[i][j] = mat[rows-1-j][i];
+			}
+		}
+
+		return transposed;
+	}
+
+	function rotate180(mat) {
+		var rows = mat.length;
+		var cols = mat[0].length;
+		var transposed = [];
+
+		for (var i = 0; i < rows; i++) {
+			transposed[i] = [];
+			for (var j = 0; j < cols; j++) {
+				transposed[i][j] = mat[rows-1-i][cols - 1 - j];
+			}
+		}
+
+		return transposed;
+	}
+
+	function rotate270(mat) {
+		var rows = mat.length;
+		var cols = mat[0].length;
+		var transposed = [];
+
+		for (var i = 0; i < cols; i++) {
+			transposed[i] = [];
+			for (var j = 0; j < rows; j++) {
+				transposed[i][j] = mat[j][cols-1-i];
+			}
+		}
+
+		return transposed;
+	}
+
+	var timesToRotate = degrees / 90;
+
+	for (i = 0; i < timesToRotate; i++) {
+		matrix = rotate90(matrix);
+	}
+
+	var result = matrix.map(function(row) {
+		return row.join('');
+	});
+
+	return result.join('\n');
+}
+
+console.log(solve([
+'Rotate(270)',
+'hello',
+'softuni',
+'exam']));
+</script>	
+</body>
+</html>

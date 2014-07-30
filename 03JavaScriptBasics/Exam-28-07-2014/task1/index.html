@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Double Rakiya Numbers</title>
+</head>
+<body>
+<script>
+function solve(input) {
+	var start = parseInt(input[0], 10);
+	var end = parseInt(input[1], 10);
+	var result = ['<ul>'];
+	var pushed = false;
+
+	for (var i = start; i <= end; i++) {
+		var num = (i).toString();
+		pushed = false;
+
+		for (var j = 0; j < num.length; j++) {
+			var digits = num[j] + num[j+1];
+
+			if (num.indexOf(digits) >= 0 &&
+					num.indexOf(digits) !== j &&
+					num.indexOf(digits) !== j-1 &&
+					num.indexOf(digits) !== j+1) {
+
+				result.push('<li><span class=\'rakiya\'>' + 
+					num + '</span><a href="view.php?id=' +
+					num + '>View</a></li>');
+
+				pushed = true;
+				break;
+			}
+		}
+
+		if (!pushed) {
+			result.push('<li><span class=\'num\'>'+num+'</span></li>');
+		}
+	}
+
+	result.push('</ul>');
+	return result.join('\n');
+}
+
+solve(['55555', '55560']);
+</script>
+</body>
+</html>

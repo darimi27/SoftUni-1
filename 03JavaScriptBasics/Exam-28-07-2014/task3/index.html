@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sort Table</title>
+</head>
+<body>
+<script>
+function sortTable(input) {
+	var products = input.slice(2, input.length-1);
+
+	// console.log(products);
+
+	products.sort(function(a, b) {
+		var startSecondTdA = a.indexOf('<td>', 9);
+		var endSecondTdA = a.indexOf('</td>', startSecondTdA+1);
+		var startSecondTdB = b.indexOf('<td>', 9);
+		var endSecondTdB = b.indexOf('</td>', startSecondTdB+1);
+
+		var priceA = a.substring(startSecondTdA+4, endSecondTdA);
+		var priceB = b.substring(startSecondTdB+4, endSecondTdB);
+
+		return priceA - priceB;
+	});
+
+	// console.log(products);
+	var result = input[0] + '\n' + input[1] + '\n' +
+		products.join('\n') + '\n' + input.slice(-1);
+
+	return result;
+}
+
+console.log(sortTable([
+'<table>',
+'<tr><th>Product</th><th>Price</th><th>Votes</th></tr>',
+'<tr><td>Vodka Finlandia 1 l</td><td>19.35</td><td>+12</td></tr>',
+'<tr><td>Ariana Radler 0.5 l</td><td>1.19</td><td>+33</td></tr>',
+'<tr><td>Laptop HP 250 G2</td><td>629</td><td>+1</td></tr>',
+'<tr><td>Kamenitza Grapefruit 1 l</td><td>1.85</td><td>+7</td></tr>',
+'<tr><td>Cofee Davidoff 250 gr.</td><td>11.99</td><td>+11</td></tr>',
+'</table>']));
+</script>
+</body>
+</html>

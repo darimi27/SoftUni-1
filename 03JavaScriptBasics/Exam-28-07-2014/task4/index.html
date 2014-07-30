@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Soccer Results</title>
+</head>
+<body>
+<script>
+function soccerResults(results) {
+	var parsed = [],
+		json = {},
+		sortedJSON = {};
+
+	function addToJSON(team, opponent, scored, recieved) {
+		if (json[team]) {
+			json[team].goalsScored += scored;
+			json[team].goalsConceded += recieved;
+			if (json[team].matchesPlayedWith.indexOf(opponent) < 0) {
+				json[team].matchesPlayedWith.push(opponent);
+			}
+		} else {
+			json[team] = {
+				goalsScored: scored,
+				goalsConceded: recieved,
+				matchesPlayedWith: [opponent]
+			}
+		}
+	}
+
+	results.forEach(function(res) {
+		var score = res.split(/[\/:-]/).map(function(token) {
+			return token.trim();
+		})
+
+		parsed.push(score);
+	});
+
+	for (var i = 0; i < parsed.length; i++) {
+		var team1 = parsed[i][0];
+		var team2 = parsed[i][1];
+		var team1goals = parseInt(parsed[i][2], 10);
+		var team2goals = parseInt(parsed[i][3], 10);
+
+		addToJSON(team1, team2, team1goals, team2goals);
+		addToJSON(team2, team1, team2goals, team1goals);
+	}
+
+	for (var match in json) {
+		json[match].matchesPlayedWith.sort();
+	}
+
+	// console.log(parsed);
+	// console.log(json);
+	Object.keys(json).sort().forEach(function(key) {
+		sortedJSON[key] = json[key];
+	});
+	
+	return JSON.stringify(sortedJSON);
+}
+
+console.log(soccerResults([
+'Germany / Argentina: 1-0',
+'Brazil / Netherlands: 0-3',
+'Netherlands / Argentina: 0-0',
+'Brazil / Germany: 1-7',
+'Argentina / Belgium: 1-0',
+'Netherlands / Costa Rica: 0-0',
+'France / Germany: 0-1',
+'Brazil / Colombia: 2-1']));
+</script>
+</body>
+</html>
